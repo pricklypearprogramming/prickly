@@ -1,11 +1,20 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {purple500, blueGrey500} from 'material-ui/styles/colors';
 
 import Form from './Form';
 import '../css/style.css';
 
 injectTapEventPlugin();
+
+const muiTheme = getMuiTheme({
+  palette: {
+    primary1Color: purple500,
+    accent1Color: blueGrey500,
+  },
+});
 
 class Intro extends React.Component {
   state = {
@@ -27,7 +36,7 @@ class Intro extends React.Component {
 
   render() {
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider muiTheme={muiTheme}>
         <div>
           <div>
             <h2>This is Intro Page</h2>
