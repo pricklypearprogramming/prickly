@@ -1,0 +1,39 @@
+
+
+h1 {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+    font-family: 'Indie Flower', cursive;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+h4 {
+    font-family: 'Indie Flower', cursive;
+}
+
+h5 {
+    font-family: 'Indie Flower', cursive;
+}
+
+#register {
+    align-content: center;
+}
+
+#buildVideo {
+    margin: auto;
+    display: block;
+}
+
+input[type=text] {
+    background-color: #3CBC8D;
+    color: white;
+}
