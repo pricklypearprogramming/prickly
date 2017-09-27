@@ -1,0 +1,25 @@
+contentStyle {
+    padding: '40px';
+  };
+  
+textFieldStyle {
+    display: 'block';
+    width: '50%';
+    height: 60px;
+    width: 60px;
+  };
+  
+buttonstyle {
+    margin-Top: '20px';
+    width: '50%';
+  };
+  
+styles {
+    block: {
+      maxWidth: 250;
+    },
+    checkbox: {
+      marginBottom: 16,
+    },
+  };
+  
