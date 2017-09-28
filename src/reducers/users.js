@@ -3,19 +3,15 @@ import * as types from '../constants/constants';
 const initialState = [
   {
     id: 76360,
-    firstname: 'Jesse',
-    lastname: 'Tomchak',
     userName: 'jthomchak',
-    email: 'jtomchak@codercamp.com',
     password: 'password',
+    email: 'jtomchak@codercamp.com',
   },
   {
     id: 150330,
-    firstname: 'Kyle',
-    lastname: 'Simpson',
     userName: 'ksimpson',
-    email: 'jksimpson@codercamp.com',
     password: 'password',
+    email: 'jksimpson@codercamp.com',
   },
 ];
 

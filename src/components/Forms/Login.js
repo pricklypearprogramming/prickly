@@ -36,16 +36,12 @@ const buttonstyle = {
 
 class Login extends React.Component {
   state = {
-    firstName: '',
-    firstNameError: '',
-    lastName: '',
-    lastNameError: '',
     userName: '',
     userNameError: '',
-    email: '',
-    emailError: '',
     password: '',
     passwordError: '',
+    email: '',
+    emailError: '',
   };
 
   change = e => {
@@ -58,11 +54,9 @@ class Login extends React.Component {
   validate = () => {
     let isError = false;
     const errors = {
-      firstNameError: '',
-      lastNameError: '',
       userNameError: '',
-      emailError: '',
       passwordError: '',
+      emailError: '',
     };
 
     if (this.state.userName.length < 5) {
@@ -93,23 +87,17 @@ class Login extends React.Component {
       // clear form
       //if (!err) {}
       this.setState({
-        firstName: '',
-        firstNameError: '',
-        lastName: '',
-        lastNameError: '',
         userName: '',
         userNameError: '',
-        email: '',
-        emailError: '',
         password: '',
         passwordError: '',
+        email: '',
+        emailError: '',
       });
       this.props.onChange({
-        firstName: '',
-        lastName: '',
         userName: '',
-        email: '',
         password: '',
+        email: '',
       });
     }
   };
@@ -117,11 +105,9 @@ class Login extends React.Component {
   _sendForm(e) {
     e.preventDefault();
     var _data = {
-      firstName: this.refs.firstName.value,
-      lastName: this.refs.lastName.value,
       userName: this.refs.userName.value,
-      email: this.refs.email.value,
       password: this.refs.password.value,
+      email: this.refs.email.value,
     };
     console.log(_data);
   }
@@ -130,29 +116,6 @@ class Login extends React.Component {
     return (
       <div style={contentStyle}>
         <form>
-          <TextField
-            name="firstName"
-            //hintText="First name"
-            floatingLabelText="First Name"
-            value={this.state.firstName}
-            onChange={e => this.change(e)}
-            errorText={this.state.firstNameError}
-            floatingLabelFixed
-            style={textFieldStyle}
-            ref="firstName"
-          />
-          <TextField
-            name="lastName"
-            //hintText="Last Name"
-            floatingLabelText="Last Name"
-            value={this.state.lastName}
-            onChange={e => this.change(e)}
-            errorText={this.state.lastNameError}
-            floatingLabelFixed
-            style={textFieldStyle}
-            ref="lastName"
-          />
-          <br />
           <TextField
             name="userName"
             //hintText="UserName"
@@ -166,18 +129,6 @@ class Login extends React.Component {
           />
           <br />
           <TextField
-            name="email"
-            //hintText="Email"
-            floatingLabelText="Email"
-            value={this.state.email}
-            onChange={e => this.change(e)}
-            errorText={this.state.emailError}
-            floatingLabelFixed
-            style={textFieldStyle}
-            ref="email"
-          />
-          <br />
-          <TextField
             name="password"
             //hintText="Password"
             floatingLabelText="Password"
@@ -188,6 +139,18 @@ class Login extends React.Component {
             floatingLabelFixed
             style={textFieldStyle}
             ref="password"
+          />
+          <br />
+          <TextField
+            name="email"
+            //hintText="Email"
+            floatingLabelText="Email"
+            value={this.state.email}
+            onChange={e => this.change(e)}
+            errorText={this.state.emailError}
+            floatingLabelFixed
+            style={textFieldStyle}
+            ref="email"
           />
           <br />
           <RaisedButton
@@ -207,7 +170,7 @@ class Login extends React.Component {
 const mapStatetoProps = (state, props) => {
   const userId = parseInt(props.match.params.userId, 10);
   return {
-    hero: state.users.find(user => user.id === userId),
+    user: state.users.find(user => user.id === userId),
   };
 };
 

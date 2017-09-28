@@ -1,4 +1,7 @@
 import React from 'react';
+import './contributor.css';
+//import '../css/materialize.min.css';
+//import '../fonts/roboto';
 
 class Contributor extends React.Component {
   render() {
@@ -7,7 +10,7 @@ class Contributor extends React.Component {
         <div class="body orange lighten-2">
           <nav>
             <div class="nav-wrapper sky blue lighten-2">
-              <img src="images/prickly.png" class="brand-logo" />
+              <img src="images/prickly.png" alt="Logo" class="brand-logo" />
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
                   <a href="../../contributor-registration.html">Register</a>
@@ -31,19 +34,25 @@ class Contributor extends React.Component {
           <h2>Ways to Contribute</h2>
           <p>Lorem Ipsum</p>
           <h3>Create a Video</h3>
-          <img id="buildVideo" src="images/buildVideo.png" />
+          <img id="buildVideo" alt="BVideo" src="images/buildVideo.png" />
           <p>Lorem Ipsum</p>
           <h5>Sample Video</h5>
           <iframe
+            title="Contributor"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/jljZESJf-Gw"
             frameborder="0"
             allowfullscreen
+            alt="YouTube"
           />
           <h6>This video was created by Christopher Greene-Szmadzinski</h6>
           <h3>Create an Infographic</h3>
-          <img id="buildInfographic" src="images/buildInfographic.png" />
+          <img
+            id="buildInfographic"
+            src="images/buildInfographic.png"
+            alt="Building"
+          />
         </div>
       </div>
     );

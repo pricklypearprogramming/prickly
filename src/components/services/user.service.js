@@ -1,4 +1,5 @@
-const BASE_URL = 'https://api.github.com/users/';
+const BASE_URL =
+  'mongodb://<dbuser>:<dbpassword>@ds149934.mlab.com:49934/ppplmsapp';
 
 const fetchGitUsers = name =>
   fetch(

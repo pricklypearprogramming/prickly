@@ -18,16 +18,12 @@ const buttonstyle = {
 
 export default class Form extends React.Component {
   state = {
-    firstName: '',
-    firstNameError: '',
-    lastName: '',
-    lastNameError: '',
-    username: '',
-    usernameError: '',
-    email: '',
-    emailError: '',
+    userName: '',
+    userNameError: '',
     password: '',
     passwordError: '',
+    email: '',
+    emailError: '',
   };
 
   change = e => {
@@ -40,16 +36,14 @@ export default class Form extends React.Component {
   validate = () => {
     let isError = false;
     const errors = {
-      firstNameError: '',
-      lastNameError: '',
-      usernameError: '',
-      emailError: '',
+      userNameError: '',
       passwordError: '',
+      emailError: '',
     };
 
-    if (this.state.username.length < 5) {
+    if (this.state.userName.length < 5) {
       isError = true;
-      errors.usernameError = 'Username needs to be atleast 5 characters long';
+      errors.userNameError = 'Username needs to be atleast 5 characters long';
     }
 
     if (this.state.email.indexOf('@') === -1) {
@@ -70,25 +64,22 @@ export default class Form extends React.Component {
     // this.props.onSubmit(this.state);
     const err = this.validate();
     if (!err) {
+      //Send form to database
+      //this._sendForm();
       // clear form
+      //if (!err) {}
       this.setState({
-        firstName: '',
-        firstNameError: '',
-        lastName: '',
-        lastNameError: '',
-        username: '',
-        usernameError: '',
-        email: '',
-        emailError: '',
+        userName: '',
+        userNameError: '',
         password: '',
         passwordError: '',
+        email: '',
+        emailError: '',
       });
       this.props.onChange({
-        firstName: '',
-        lastName: '',
-        username: '',
-        email: '',
+        userName: '',
         password: '',
+        email: '',
       });
     }
   };
@@ -96,11 +87,9 @@ export default class Form extends React.Component {
   _sendForm(e) {
     e.preventDefault();
     var _data = {
-      firstName: this.refs.firstName.value,
-      lastName: this.refs.lastName.value,
-      username: this.refs.userName.value,
-      email: this.refs.email.value,
+      userName: this.refs.userName.value,
       password: this.refs.password.value,
+      email: this.refs.email.value,
     };
     console.log(_data);
   }
@@ -108,53 +97,17 @@ export default class Form extends React.Component {
   render() {
     return (
       <div style={contentStyle}>
-        <form> 
+        <form>
           <TextField
-            name="firstName"
-            //hintText="First name"
-            floatingLabelText="First name"
-            value={this.state.firstName}
+            name="userName"
+            //hintText="UserName"
+            floatingLabelText="User Name"
+            value={this.state.userName}
             onChange={e => this.change(e)}
-            errorText={this.state.firstNameError}
-            floatingLabelFixed
-            style={textFieldStyle}
-            ref="firstName"
-          />
-          <br />
-          <TextField
-            name="lastName"
-            //hintText="Last Name"
-            floatingLabelText="Last Name"
-            value={this.state.lastName}
-            onChange={e => this.change(e)}
-            errorText={this.state.lastNameError}
-            floatingLabelFixed
-            style={textFieldStyle}
-            ref="lastName"
-          />
-          <br />
-          <TextField
-            name="username"
-            //hintText="Username"
-            floatingLabelText="Username"
-            value={this.state.username}
-            onChange={e => this.change(e)}
-            errorText={this.state.usernameError}
+            errorText={this.state.userNameError}
             floatingLabelFixed
             style={textFieldStyle}
             ref="userName"
-          />
-          <br />
-          <TextField
-            name="email"
-            //hintText="Email"
-            floatingLabelText="Email"
-            value={this.state.email}
-            onChange={e => this.change(e)}
-            errorText={this.state.emailError}
-            floatingLabelFixed
-            style={textFieldStyle}
-            ref="email"
           />
           <br />
           <TextField
@@ -170,8 +123,20 @@ export default class Form extends React.Component {
             ref="password"
           />
           <br />
+          <TextField
+            name="email"
+            //hintText="Email"
+            floatingLabelText="Email"
+            value={this.state.email}
+            onChange={e => this.change(e)}
+            errorText={this.state.emailError}
+            floatingLabelFixed
+            style={textFieldStyle}
+            ref="email"
+          />
+          <br />
           <RaisedButton
-            label="Submit"
+            label="Login"
             onClick={e => this.onSubmit(e)}
             primary
             //fullWidth={true}

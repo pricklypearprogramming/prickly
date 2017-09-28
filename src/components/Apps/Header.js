@@ -100,6 +100,9 @@ class Header extends React.Component {
               <ListItem>
                 <Link to={'/cssFrameworks'}>CSS Frameworks</Link>
               </ListItem>
+              <ListItem>
+                <Link to={'/contributor'}>Contributor</Link>
+              </ListItem>
             </List>
           </Drawer>
         </div>

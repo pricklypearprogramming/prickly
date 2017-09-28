@@ -21,7 +21,11 @@ var config = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: "styles!css" },
+      {
+        test: /\.css$/,
+        loader: 'styles!css',
+        loader: 'style-loader!resolve-url!css-loader',
+      },
       {
         test: /\.(js|jsx)$/, // search for js files
         include: SRC_DIR,
@@ -29,7 +33,7 @@ var config = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react', 'stage-0'], // use es2015 and react
-          plugins: ['transform-runtime']
+          plugins: ['transform-runtime'],
         },
       },
     ],
