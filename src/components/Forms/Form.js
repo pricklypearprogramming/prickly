@@ -65,9 +65,10 @@ export default class Form extends React.Component {
     const err = this.validate();
     if (!err) {
       //Send form to database
-      //this._sendForm();
+      this._sendForm();
       // clear form
-      //if (!err) {}
+      if (!err) {
+      }
       this.setState({
         userName: '',
         userNameError: '',
