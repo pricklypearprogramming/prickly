@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="ppp-contributor.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Initialize Materialize Scripts -->
+    <script>
+        $(".button-collapse").sideNav();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
+    </script>
+    <script>
+        $(".dropdown-button").dropdown({
+            hover: false
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper purple">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <!-- <img src="images/prickly.png" height=200px; width=200px; class="brand-logo"> -->
+                <li><a id="kb" href="contributor-home.html">Home </a></li>
+                <!-- <li><a href="learningcenter-home.html">Learning Center</a></l> -->
+                <li><a class='dropdown-button btn purple' href="learningcenter-home.html" data-activates='dropdown1'>Student</a></l>
+                    <li><a href="Contributor-dashboard.html">Contributor</a></li>
+                    <li><a href="contributor-registration.html"> Register</a></li>
+                    <li><a href="logout-landing.html">Log Out</a></li>
+
+
+                    <!-- Dropdown Structure -->
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li><a href="HTML.html" class="Reallink"><img src="images\ps_4.png"></a></li>
+                        <li><a href="JavaScript.html" class="Reallink"><img src="images\imageedit.gif"></a></li>
+                        <li><a href="CSS.html" class="Reallink"><img src="images\ps_7.png"></a></li>
+                        <li class="divider"></li>
+                        <li><a href="Jquery.html" class="Reallink"><img src="images\Jquery.gif"></a></li>
+                    </ul>
+            </ul>
+        </div>
+    </nav><br><br><br><br><br><br><br>
+    <h1 class="center">Contributor Registration</h1>
+    <form class="container col s12 purple">
+        <div class="row center">
+            <div class="input-field col s12">
+                <input class="w3-input w3-border w3-round" type="text center" placeholder="User Name">
+                <br></br>
+                <input class="w3-input w3-border w3-round" type="text center" placeholder="Password">
+                <br></br>
+                <input class="w3-input w3-border w3-round" type="text center" placeholder="Confirm Password">
+                <br></br>
+                <a href="newregistration-landingpage.html" class="waves-effect waves-light btn">Submit</a>
+            </div>
+        </div>
+    </form>
+</body>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<footer id="ftt2" class="page-footer">
+    <div class="container center">
+        <div class="row">
+            <div class="col 18 s12 ">
+                <a href="http://www.PricklyPearProgramming.org "><img class="waves-effect waves-light btn-floating" src="images/ppp_website.png ">PricklyPearProgramming</a>
+                <img class="waves-effect waves-light btn-floating" src="images\linkedin logo.png ">Linkedin
+                <a href="https://www.facebook.com/PricklyPearProgramming/ "><img id="facebook"  class="waves-effect waves-light btn-floating social facebook white" src="images\facebook_button.png">Facebook</a>
+                <img class="waves-effect waves-light btn-floating" src="images\youtube logo.png"> Youtube
+            </div>
+        </div>
+    </div>
+    <div id="ft2" class="footer-copyright purple darken-2 ">
+        <div class="container ">
+        </div>
+    </div>
+</footer>
+
+</html>
