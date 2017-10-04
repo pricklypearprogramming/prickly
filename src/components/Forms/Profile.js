@@ -1,14 +1,14 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 import Checkbox from 'material-ui/Checkbox';
 //import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 //import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 //import '../css/forms.css';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import {saveUser} from '../../Actions/saveUser';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { saveUser } from '../../Actions/saveUser';
 
 const contentStyle = {
   padding: '40px',
@@ -72,7 +72,7 @@ class Profile extends React.Component {
   }
 
   change = e => {
-    this.props.onChange({[e.target.name]: e.target.value});
+    this.props.onChange({ [e.target.name]: e.target.value });
     this.setState({
       [e.target.name]: e.target.value,
     });

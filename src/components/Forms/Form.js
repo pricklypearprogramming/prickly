@@ -17,23 +17,31 @@ const buttonstyle = {
 };
 
 export default class Form extends React.Component {
-  state = {
-    userName: '',
-    userNameError: '',
-    password: '',
-    passwordError: '',
-    email: '',
-    emailError: '',
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      userName: '',
+      userNameError: '',
+      password: '',
+      passwordError: '',
+      email: '',
+      emailError: '',
+    };
 
-  change = e => {
+    this.change = this.change.bind(this);
+    this.validate = this.validate.bind(this);
+    this.submit = this.onSubmit.bind(this);
+    this.sendForm = this.sendForm.bind(this);
+  }
+
+  change(e) {
     this.props.onChange({[e.target.name]: e.target.value});
     this.setState({
       [e.target.name]: e.target.value,
     });
-  };
+  }
 
-  validate = () => {
+  validate(e) {
     let isError = false;
     const errors = {
       userNameError: '',
@@ -57,18 +65,17 @@ export default class Form extends React.Component {
     });
 
     return isError;
-  };
+  }
 
-  onSubmit = e => {
+  onSubmit(e) {
     e.preventDefault();
-    // this.props.onSubmit(this.state);
+    this.props.onSubmit(this.state);
     const err = this.validate();
     if (!err) {
       //Send form to database
-      this._sendForm();
+      //this._sendForm();
       // clear form
-      if (!err) {
-      }
+      //if (!err) {}
       this.setState({
         userName: '',
         userNameError: '',
@@ -83,9 +90,9 @@ export default class Form extends React.Component {
         email: '',
       });
     }
-  };
+  }
 
-  _sendForm(e) {
+  sendForm(e) {
     e.preventDefault();
     var _data = {
       userName: this.refs.userName.value,

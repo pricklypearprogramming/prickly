@@ -9,7 +9,7 @@ import CssFrame from '../Lessons/CssFrameworks';
 import Intro from '../Lessons/Intro';
 import Matpg from '../Lessons/Materialize';
 import Contributor from './Contributor';
-import Header from './Header';
+//import Header from './Header';
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster
@@ -19,7 +19,6 @@ import Header from './Header';
 const Main = () => (
   <Router>
     <div>
-      <Header />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/background" component={Background} />

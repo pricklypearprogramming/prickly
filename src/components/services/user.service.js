@@ -1,13 +1,10 @@
-const BASE_URL =
-  'mongodb://<dbuser>:<dbpassword>@ds149934.mlab.com:49934/ppplmsapp';
+const BASE_URL = 'mongodb://admin:admin@ds149934.mlab.com:49934/ppplmsapp';
 
-const fetchGitUsers = name =>
-  fetch(
-    `${BASE_URL}${name}?access_token=554612bc8de7a1a6744b77055cbab693543d20f0`
-  )
+const fetchGitUsers = userName =>
+  fetch(`${BASE_URL}${userName}`)
     .then(status)
     .then(payload => payload.json())
-    .then(user => user)
+    .then(userName => userName)
     .catch(error => {
       return Promise.reject(error);
     });
